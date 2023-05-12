@@ -5,13 +5,13 @@
                 <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
                 <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
             </div>
-            <a href="#" class="cover-info__link">View collection</a>
+            <ViewCollectionBtn/>
         </div>
     </div>
 </template>
 
 <script setup>
-
+import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -38,6 +38,7 @@
     &__title {
       font-family: 'Clash Display', sans-serif;
       font-size: 32px;
+      max-width: 513px;
       line-height: 140%;
       font-weight: 400;
       color: #22202E;
@@ -48,16 +49,6 @@
       font-size: 18px;
       line-height: 150%;
       color: #5B5676;
-    }
-
-    &__link {
-      line-height: 150%;
-      color: #2A254B;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 }

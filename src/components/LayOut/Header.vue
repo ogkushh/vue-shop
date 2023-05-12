@@ -1,32 +1,30 @@
 <template>
   <header class="header">
-      <div class="header-top">
-        <div class="header-top-search">
-            <img src="../../../public/header-search.svg" alt="Search">
-        </div>
-          <a href="#" class="header-logo">Avion</a>
-          <div class="header-top-right">
-              <div class="header-cart">
-                  <a href="#">
-                      <img class="header-cart-img" src="../../../public/header-cart.svg" alt="User">
-                  </a>
+          <div class="header-top">
+              <div class="header-top-search">
+                  <img src="../../../public/img/header-search.svg" alt="Search">
               </div>
-              <div class="header-user">
-                  <a href="#">
-                      <img class="header-user-img" src="../../../public/header-person.svg" alt="User">
-                  </a>
+              <a href="#" class="header-logo">Avion</a>
+              <div class="header-top-right">
+                  <div class="header-cart">
+                      <a href="#">
+                          <img class="header-cart-img" src="../../../public/img/header-cart.svg" alt="User">
+                      </a>
+                  </div>
+                  <div class="header-user">
+                      <a href="#">
+                          <img class="header-user-img" src="../../../public/img/header-person.svg" alt="User">
+                      </a>
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="header-menu">
-          <a :href="element.path" v-for="(element, i) in menu" :key="i" class="header-menu__link">{{element.name}}</a>
-      </div>
+          <div class="header-menu">
+              <a :href="element.path" v-for="(element, i) in menu" :key="i" class="header-menu__link">{{element.name}}</a>
+          </div>
   </header>
 </template>
 
 <script setup>
-import {ref} from "vue";
-
 const menu = [
     {
         name: 'Plant pots',

@@ -1,16 +1,19 @@
 <template>
+    <Header/>
   <div class="container">
-      <Header/>
       <CoverImage/>
       <AboutBrand/>
+      <Products/>
+      <Ideas/>
   </div>
 </template>
 
 <script setup>
-
 import Header from "./components/LayOut/Header.vue";
 import CoverImage from "./components/CoverImage.vue";
 import AboutBrand from "./components/AboutBrand.vue";
+import Products from "./components/ProductsIndex.vue";
+import Ideas from "./components/Ideas.vue";
 </script>
 
 <style lang="scss">
@@ -36,7 +39,7 @@ img {
 }
 
   .container {
-      max-width: 1140px;
+      max-width: 1280px;
       margin: 0 auto;
   }
 </style>
