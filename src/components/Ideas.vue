@@ -6,41 +6,44 @@
                     <h2 class="ideas-info__title">It started with a small idea</h2>
                     <span class="ideas-info__description">A global brand with local beginnings, our story begain in a small studio in South London in early 2014</span>
                 </div>
-                <ViewCollectionBtn/>
+                <ViewCollectionBtn color="#fff"/>
             </div>
             <div class="ideas-img">
-                <img src="../../public/img/ideas-room.png" alt="">
+                <img src="/public/img/ideas-room.png" alt="Room">
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
+import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
 </script>
 
 <style lang="scss" scoped>
 .ideas {
   margin-bottom: 60px;
+
   &-wrapper {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 16px;
   }
+
   &-info {
-    background-color: #2A254B;
+    background-color: var(--dark-primary);
     padding: 50px 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 478px;
+
     &__title {
-      font-family: 'Clash Display', sans-serif;
+      font-family: var(--font-clash-display);
       font-weight: 400;
       font-size: 32px;
       line-height: 39px;
-      color: #FFFFFF;
+      color: var(--white);
       margin-bottom: 20px;
     }
 
@@ -48,8 +51,12 @@ import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
       font-weight: 400;
       font-size: 18px;
       line-height: 24px;
-      color: #FFFFFF;
+      color: var(--white);
     }
   }
+}
+
+.view-collection__btn {
+  background-color: rgba(249, 249, 249, 0.15);
 }
 </style>

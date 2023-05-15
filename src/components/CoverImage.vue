@@ -11,12 +11,12 @@
 </template>
 
 <script setup>
-import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
+import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
 </script>
 
 <style lang="scss" scoped>
 .cover {
-  background-image: url('../assets/cover-img.jpg');
+  background-image: url('/public/img/room-main.png');
   height: 704px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@ import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
   margin-bottom: 80px;
 
   &-info {
-    background-color: #fff;
+    background-color: var(--white);
     max-width: 630px;
     padding: 50px 55px;
     height: 444px;
@@ -36,12 +36,12 @@ import ViewCollectionBtn from "./LayOut/ViewCollectionBtn.vue";
     justify-content: space-between;
 
     &__title {
-      font-family: 'Clash Display', sans-serif;
+      font-family: var(--font-clash-display);
       font-size: 32px;
       max-width: 513px;
       line-height: 140%;
       font-weight: 400;
-      color: #22202E;
+      color: var(--black-title);
       margin-bottom: 20px;
     }
 

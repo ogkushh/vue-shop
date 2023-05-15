@@ -4,22 +4,22 @@
               <div class="header-top-search">
                   <img src="../../../public/img/header-search.svg" alt="Search">
               </div>
-              <a href="#" class="header-logo">Avion</a>
+              <router-link to="#" class="header-logo">Avion</router-link>
               <div class="header-top-right">
                   <div class="header-cart">
-                      <a href="#">
-                          <img class="header-cart-img" src="../../../public/img/header-cart.svg" alt="User">
-                      </a>
+                      <router-link to="/cart">
+                          <img class="header-cart-img" src="../../../public/img/header-cart.svg" alt="Cart">
+                      </router-link>
                   </div>
                   <div class="header-user">
-                      <a href="#">
+                      <router-link to="/user">
                           <img class="header-user-img" src="../../../public/img/header-person.svg" alt="User">
-                      </a>
+                      </router-link>
                   </div>
               </div>
           </div>
           <div class="header-menu">
-              <a :href="element.path" v-for="(element, i) in menu" :key="i" class="header-menu__link">{{element.name}}</a>
+              <router-link :to="element.path" v-for="(element, i) in menu" :key="i" class="header-menu__link">{{element.name}}</router-link>
           </div>
   </header>
 </template>
@@ -60,7 +60,7 @@ const menu = [
 <style lang="scss" scoped>
   .header {
     min-height: 132px;
-    background-color: #fff;
+    background-color: var(--white);
 
     &-top {
       display: grid;
@@ -79,12 +79,12 @@ const menu = [
       margin-right: 16px;
     }
     &-logo {
-      color: #22202E;
+      color: var(--black-title);
       font-weight: 400;
       font-size: 24px;
       line-height: 30px;
       text-decoration: none;
-      font-family: 'Clash Display', sans-serif;
+      font-family: var(--font-clash-display);
       text-align: center;
       &:hover {
         text-decoration: underline;
@@ -99,7 +99,7 @@ const menu = [
         margin-right: 44px;
         font-weight: 400;
         line-height: 22px;
-        color: #726E8D;
+        color: var(--gray-text);
         text-decoration: none;
         &:last-child {
           margin-right: 0;

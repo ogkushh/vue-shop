@@ -15,22 +15,22 @@
 <script setup>
 const aboutBrands = [
     {
-        img: '../../public/img/about-brand-car.svg',
+        img: '/public/img/about-brand-car.svg',
         title: 'Next day as standard',
         description: 'Order before 3pm and get your order the next day as standard',
     },
     {
-        img: '../../public/img/about-brand-check-box.svg',
+        img: '/public/img/about-brand-check-box.svg',
         title: 'Made by true artisans',
         description: 'Handmade crafted goods made with real passion and craftmanship',
     },
     {
-        img: '../../public/img/about-brand-pay.svg',
+        img: '/public/img/about-brand-pay.svg',
         title: 'Unbeatable prices',
         description: 'For our materials and quality you won’t find better prices anywhere',
     },
     {
-        img: '../../public/img//about-brand-flower.svg',
+        img: '/public/img//about-brand-flower.svg',
         title: 'Recycled packaging',
         description: 'We use 100% recycled to ensure our footprint is more manageable',
     },
@@ -46,7 +46,7 @@ const aboutBrands = [
     font-weight: 400;
     font-size: 24px;
     line-height: 140%;
-    color: #2A254B;
+    color: var(--dark-primary);
     margin-bottom: 36px;
   }
 
@@ -58,7 +58,7 @@ const aboutBrands = [
   }
 
   &__element {
-    background-color: #F9F9F9;
+    background-color: var(--light-gray);
     padding: 48px;
     &-contains{
     }
@@ -71,13 +71,13 @@ const aboutBrands = [
       display: block;
       font-size: 20px;
       line-height: 140%;
-      color: #2A254B;
+      color: var(--dark-primary);
       margin-bottom: 12px;
     }
 
     &-description {
       line-height: 150%;
-      color: #2A254B;
+      color: var(--dark-primary);
     }
   }
 }

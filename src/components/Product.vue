@@ -1,9 +1,9 @@
 <template>
     <div class="product">
-        <a href="#">
+        <router-link to="/">
             <img class="product-img" :src="img" :alt="title">
-        </a>
-        <a class="product-name" href="#">{{ title }}</a>
+        </router-link>
+        <router-link class="product-name" to="/">{{ title }}</router-link>
         <span class="product-price">£{{ price }}</span>
     </div>
 </template>
@@ -39,8 +39,8 @@ const props = defineProps({
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
-    font-family: 'Clash Display', sans-serif;
-    color: #2A254B;
+    font-family: var(--font-clash-display);
+    color: var(--dark-primary);
     text-decoration: none;
     margin-bottom: 8px;
 
@@ -53,7 +53,7 @@ const props = defineProps({
     display: block;
     font-size: 18px;
     line-height: 150%;
-    color: #2A254B;
+    color: var(--dark-primary);
   }
 }
 </style>
