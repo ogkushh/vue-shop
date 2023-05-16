@@ -1,12 +1,12 @@
 <template>
     <div class="cover">
-        <div class="cover-info">
-            <div class="cover-info__texts">
-                <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
-                <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
+            <div class="cover-info">
+                <div class="cover-info__texts">
+                    <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
+                    <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
+                </div>
+                <ViewCollectionBtn/>
             </div>
-            <ViewCollectionBtn/>
-        </div>
     </div>
 </template>
 

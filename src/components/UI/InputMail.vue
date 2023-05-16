@@ -1,14 +1,27 @@
 <template>
     <form class="subscribe-form">
         <div class="input-group">
-            <input type="email" class="input" id="Email" name="Email" placeholder="your@email.com">
-            <input class="button--submit" value="Sign up" type="submit">
+            <input type="email" class="input" id="Email" name="Email" placeholder="your@email.com" :style="{width: width}">
+            <input class="button--submit" value="Sign up" type="submit" :style="{background: btnBack, color: btnColor}">
         </div>
     </form>
 </template>
 
 <script setup>
-
+const props = defineProps({
+    btnColor: {
+        type: String,
+        default: '#fff',
+    },
+    btnBack: {
+        type: String,
+        default: '#2A254B'
+    },
+    width: {
+        type: String,
+        default:'385px'
+    }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -23,9 +36,9 @@
   width: 385px;
   min-height: 56px;
   padding: 0 1rem;
-  color: #fff;
+  color: var(--white);
   font-size: 15px;
-  border: 1px solid var(--dark-primary);
+  border: 1px solid;
   border-radius: 6px 0 0 6px;
   background-color: transparent;
 }
@@ -44,6 +57,10 @@
 
 .button--submit:hover {
   opacity: .9;
+}
+
+::placeholder {
+  color: silver;
 }
 
 .input:focus, .input:focus-visible {

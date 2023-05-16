@@ -30,9 +30,22 @@
                             <router-link to="/" class="footer-menu__link">Returns policy</router-link>
                         </div>
                     </div>
-                    <InputMail/>
+                    <div class="footer-form">
+                        <span class="footer-form__title">Join our mailing list</span>
+                        <InputMail btnColor="#2A254B" btnBack="#fff" width="485px"/>
+                    </div>
                 </div>
-
+                <div class="footer-bottom">
+                    <span class="footer-bottom_copyright">Copyright 2023 Avion LTD</span>
+                    <div class="footer-bottom-socials">
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-In.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-facebook.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-inst.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-skype.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-twitter.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-pinterest.svg" alt="In"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -50,14 +63,19 @@ import InputMail from "@/components/UI/InputMail.vue";
   padding: 58px 82px 25px 82px;
 
   &-top {
-    display: grid;
-    grid-template-columns: 540px 1fr;
-    column-gap: 110px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 48px;
   }
 
   &-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+
+    &-column:nth-child(2) {
+      margin: 0 133px 0 109px;
+    }
 
     &__link {
       display: block;
@@ -73,14 +91,58 @@ import InputMail from "@/components/UI/InputMail.vue";
       &:hover {
         text-decoration: underline;
       }
+    }
 
-      //&__title {
-      //  font-weight: 400;
-      //  font-size: 16px;
-      //  line-height: 20px;
-      //}
+    &__title {
+      font-family: var(--font-clash-display);
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 12px;
     }
   }
 
+  &-form {
+
+    &__title {
+      display: block;
+      font-family: var(--font-clash-display);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-bottom {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__copyright {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &-socials {
+      display: flex;
+      align-items: center;
+
+      &__link {
+        margin-right: 24px;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }
+
 </style>
