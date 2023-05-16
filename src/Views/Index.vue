@@ -1,12 +1,13 @@
 <template>
+    <div>
+        <CoverImage/>
         <div class="container">
-            <CoverImage/>
             <AboutBrand/>
             <Products/>
             <Ideas/>
         </div>
-    <Subscribe/>
-
+        <Subscribe/>
+    </div>
 </template>
 
 <script setup>
