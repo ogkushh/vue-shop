@@ -50,7 +50,14 @@ const products = ref([
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
+
+  @media screen and (max-width: 1024px){
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    text-align: center;
+  }
 }
 .btn-wrapper {
   display: flex;

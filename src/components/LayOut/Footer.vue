@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <span class="footer-bottom_copyright">Copyright 2023 Avion LTD</span>
+                    <p class="footer-bottom_copyright">Copyright 2023 Avion LTD</p>
                     <div class="footer-bottom-socials">
                         <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-In.svg" alt="In"></a>
                         <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-facebook.svg" alt="In"></a>
@@ -67,6 +67,18 @@ import InputMail from "@/components/UI/InputMail.vue";
     justify-content: space-between;
     border-bottom: 1px solid var(--primary);
     padding-bottom: 48px;
+
+    @media screen and (max-width: 1230px){
+      flex-wrap: wrap;
+      justify-content: center;
+      .footer-menu {
+        margin-bottom: 48px;
+      }
+      .footer-form__title {
+        text-align: center;
+      }
+
+    }
   }
 
   &-menu {

@@ -33,7 +33,7 @@ const props = defineProps({
 }
 
 .input {
-  width: 385px;
+  max-width: 385px;
   min-height: 56px;
   padding: 0 1rem;
   color: var(--white);
@@ -66,5 +66,11 @@ const props = defineProps({
 .input:focus, .input:focus-visible {
   border-color: var(--primary);
   outline: none;
+}
+
+@media screen and (max-width: 767px){
+  .input {
+    width: 100%;
+  }
 }
 </style>

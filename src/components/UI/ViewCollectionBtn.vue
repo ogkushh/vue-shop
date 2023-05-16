@@ -9,17 +9,24 @@ const props = defineProps( {
     color: {
         type: String,
         default: '#2A254B'
+    },
+    back: {
+        type: String,
+        default: '#F9F9F9'
     }
 })
 </script>
 
 <style lang="scss">
 .view-collection__btn {
-  display: inline-block;
-  max-width: 170px;
+  width: 170px;
   text-align: center;
   padding: 16px 32px;
   background-color: var(--light-gray);
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   &:hover {
     opacity: .8;
     cursor: pointer;

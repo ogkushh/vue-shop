@@ -1,12 +1,13 @@
 <template>
     <div class="cover">
-            <div class="cover-info">
-                <div class="cover-info__texts">
-                    <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
-                    <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
-                </div>
-                <ViewCollectionBtn/>
+        <div class="cover-info">
+            <div class="cover-info__texts">
+                <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
+                <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
             </div>
+            <ViewCollectionBtn/>
+        </div>
+        <img class="cover-image" src="/public/img/room-main.png" alt="Room">
     </div>
 </template>
 
@@ -25,6 +26,10 @@ import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
   justify-content: flex-end;
   padding-right: 80px;
   margin-bottom: 80px;
+
+  &-image {
+    display: none;
+  }
 
   &-info {
     background-color: var(--white);
@@ -51,6 +56,45 @@ import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
       color: #5B5676;
     }
   }
+}
+
+@media screen and (max-width: 767px) {
+  .cover {
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding-right: 0;
+    margin-bottom: 48px;
+
+    &-image {
+      display: block;
+    }
+
+    &-info {
+      padding: 47px 32px;
+      height: auto;
+
+
+
+      &__texts {
+        margin-bottom: 32px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 12px;
+      }
+
+      &__description {
+        display: block;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
 }
 
 </style>

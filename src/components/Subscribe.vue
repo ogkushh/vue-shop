@@ -2,7 +2,8 @@
     <div class="subscribe">
         <div class="subscribe-content">
             <h3 class="subscribe-title">Join the club and get the benefits</h3>
-            <p class="subscribe-description">Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</p>
+            <p class="subscribe-description">Sign up for our newsletter and receive exclusive offers on new ranges,
+                sales, pop up stores and more</p>
         </div>
         <div class="subscribe-checks">
             <div class="subscribe-check">
@@ -80,6 +81,43 @@ import InputMail from "@/components/UI/InputMail.vue";
       line-height: 150%;
       text-align: center;
       color: var(--white);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .subscribe {
+    padding: 24px 37px 32px 24px;
+
+    &-content {
+      text-align: start;
+    }
+
+    &-title {
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 12px;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    &-checks {
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+
+    &-check {
+
+      &:nth-child(2) {
+        margin: 8px 0;
+      }
     }
   }
 }

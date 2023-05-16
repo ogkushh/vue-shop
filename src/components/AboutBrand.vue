@@ -3,9 +3,9 @@
         <h2 class="about-brand__title">What makes our brand different</h2>
         <div class="about-brand__elements">
             <div class="about-brand__element" v-for="(element, i) of aboutBrands" :key="i">
-                    <img class="about-brand__element-img" :src="element.img" :alt="element.title">
-                    <span class="about-brand__element-title">{{ element.title }}</span>
-                    <span class="about-brand__element-description">{{ element.description }}</span>
+                <img class="about-brand__element-img" :src="element.img" :alt="element.title">
+                <span class="about-brand__element-title">{{ element.title }}</span>
+                <span class="about-brand__element-description">{{ element.description }}</span>
             </div>
         </div>
     </div>
@@ -52,16 +52,24 @@ const aboutBrands = [
 
   &__elements {
     display: grid;
-    grid-template-columns: repeat(4, 305px);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
     justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+    }
   }
 
   &__element {
     background-color: var(--light-gray);
     padding: 48px;
-    &-contains{
+
+    &-contains {
     }
+
     &-img {
       display: block;
       margin: 0 18px 12px 0;
@@ -78,6 +86,27 @@ const aboutBrands = [
     &-description {
       line-height: 150%;
       color: var(--dark-primary);
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .about-brand {
+    margin-bottom: 50px;
+
+    &__title {
+      max-width: 274px;
+      text-align: start;
+      font-size: 20px;
+    }
+
+    &__elements {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__element {
+      padding: 36px 24px;
     }
   }
 }

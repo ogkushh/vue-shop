@@ -29,6 +29,12 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .product {
+
+  @media screen and (max-width: 1024px) {
+    .product-img {
+      margin: 0 auto 24px;
+    }
+  }
   &-img {
     display: block;
     margin-bottom: 24px;
