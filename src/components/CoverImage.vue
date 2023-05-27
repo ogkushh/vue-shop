@@ -1,11 +1,15 @@
 <template>
     <div class="cover">
         <div class="cover-info">
-            <div class="cover-info__texts">
-                <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
-                <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
+            <div class="container">
+                <div class="cover-info__texts">
+                    <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
+                    <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
+                </div>
+                <div class="btn-wrapper">
+                    <ViewCollectionBtn/>
+                </div>
             </div>
-            <ViewCollectionBtn/>
         </div>
         <img class="cover-image" src="/public/img/room-main.png" alt="Room">
     </div>
@@ -39,6 +43,10 @@ import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &__texts {
+      margin-bottom: 157px;
+    }
 
     &__title {
       font-family: var(--font-clash-display);
@@ -93,6 +101,11 @@ import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
         line-height: 22px;
       }
     }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
 }

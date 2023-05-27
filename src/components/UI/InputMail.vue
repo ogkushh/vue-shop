@@ -19,7 +19,7 @@ const props = defineProps({
     },
     width: {
         type: String,
-        default:'385px'
+        default:'100%'
     }
 })
 </script>
@@ -34,6 +34,7 @@ const props = defineProps({
 
 .input {
   max-width: 385px;
+  width: 100%;
   min-height: 56px;
   padding: 0 1rem;
   color: var(--white);

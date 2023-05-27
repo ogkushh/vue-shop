@@ -1,25 +1,27 @@
 <template>
     <div class="subscribe">
-        <div class="subscribe-content">
-            <h3 class="subscribe-title">Join the club and get the benefits</h3>
-            <p class="subscribe-description">Sign up for our newsletter and receive exclusive offers on new ranges,
-                sales, pop up stores and more</p>
+        <div class="container">
+            <div class="subscribe-content">
+                <h3 class="subscribe-title">Join the club and get the benefits</h3>
+                <p class="subscribe-description">Sign up for our newsletter and receive exclusive offers on new ranges,
+                    sales, pop up stores and more</p>
+                <div class="subscribe-checks">
+                    <div class="subscribe-check">
+                        <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
+                        <span class="subscribe-check__name">Exclusive offers</span>
+                    </div>
+                    <div class="subscribe-check">
+                        <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
+                        <span class="subscribe-check__name">Free events</span>
+                    </div>
+                    <div class="subscribe-check">
+                        <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
+                        <span class="subscribe-check__name">Large discounts</span>
+                    </div>
+                </div>
+            </div>
+            <InputMail/>
         </div>
-        <div class="subscribe-checks">
-            <div class="subscribe-check">
-                <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
-                <span class="subscribe-check__name">Exclusive offers</span>
-            </div>
-            <div class="subscribe-check">
-                <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
-                <span class="subscribe-check__name">Free events</span>
-            </div>
-            <div class="subscribe-check">
-                <img src="/public/img/subscribe-check.svg" alt="Checkbox" class="subscribe-check__icon">
-                <span class="subscribe-check__name">Large discounts</span>
-            </div>
-        </div>
-        <InputMail/>
     </div>
 </template>
 
@@ -54,13 +56,14 @@ import InputMail from "@/components/UI/InputMail.vue";
     font-size: 18px;
     line-height: 150%;
     color: var(--white);
+    margin-bottom: 30px;
   }
 
   &-checks {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
   }
 
   &-check {
@@ -106,10 +109,8 @@ import InputMail from "@/components/UI/InputMail.vue";
     }
 
     &-checks {
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      margin-bottom: 28px;
+      margin: 0 auto 28px;
+      display: block;
     }
 
 

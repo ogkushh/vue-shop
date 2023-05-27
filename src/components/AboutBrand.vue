@@ -9,7 +9,6 @@
             </div>
         </div>
     </div>
-    <img src="" alt="">
 </template>
 
 <script setup>

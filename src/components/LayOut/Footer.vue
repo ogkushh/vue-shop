@@ -32,18 +32,23 @@
                     </div>
                     <div class="footer-form">
                         <span class="footer-form__title">Join our mailing list</span>
-                        <InputMail btnColor="#2A254B" btnBack="#fff" width="485px"/>
+                        <InputMail btnColor="#2A254B" btnBack="#fff"/>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <p class="footer-bottom_copyright">Copyright 2023 Avion LTD</p>
                     <div class="footer-bottom-socials">
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-In.svg" alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-facebook.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-In.svg"
+                                                                             alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-facebook.svg"
+                                                                             alt="In"></a>
                         <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-inst.svg" alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-skype.svg" alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-twitter.svg" alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-pinterest.svg" alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-skype.svg"
+                                                                             alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-twitter.svg"
+                                                                             alt="In"></a>
+                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-pinterest.svg"
+                                                                             alt="In"></a>
                     </div>
                 </div>
             </div>
@@ -60,25 +65,14 @@ import InputMail from "@/components/UI/InputMail.vue";
 .footer {
   background-color: var(--dark-primary);
   color: var(--white);
-  padding: 58px 82px 25px 82px;
+  padding-top: 58px;
 
   &-top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid var(--primary);
     padding-bottom: 48px;
-
-    @media screen and (max-width: 1230px){
-      flex-wrap: wrap;
-      justify-content: center;
-      .footer-menu {
-        margin-bottom: 48px;
-      }
-      .footer-form__title {
-        text-align: center;
-      }
-
-    }
   }
 
   &-menu {
@@ -129,10 +123,10 @@ import InputMail from "@/components/UI/InputMail.vue";
 
   &-bottom {
     padding-top: 22px;
+    padding-bottom: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     &__copyright {
       font-size: 14px;
       line-height: 19px;
@@ -152,6 +146,59 @@ import InputMail from "@/components/UI/InputMail.vue";
         &:hover {
           opacity: 0.8;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .footer-top {
+    justify-content: center;
+  }
+  .footer-menu {
+    margin-bottom: 48px;
+  }
+  .footer-form__title {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .footer{
+    &-menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 40px;
+
+      &-column:first-child {
+        margin-bottom: 40px;
+      }
+
+      &-column:nth-child(2) {
+        margin: 0 0 0 96px;
+      }
+    }
+
+    &-top {
+      padding-bottom: 16px;
+    }
+
+    &-form__title {
+      text-align: start;
+    }
+
+    &-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+
+      &-socials {
+        display: none;
+      }
+
+      &_copyright {
+        margin-bottom: 20px;
       }
     }
   }
