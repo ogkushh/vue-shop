@@ -5,8 +5,8 @@
                 <div class="header-top-search">
                     <img class="header-top-search-icon" src="/img/header-search.svg" alt="Search">
                 </div>
-                <div class="header-top-mobile-menu">
-                    <img class="header-top-mobile-menu-icon" src="/img/header-mob-menu.svg" alt="Menu">
+                <div class="header-top-mobile-menu-base" @click="isOpenedMobileMenu = !isOpenedMobileMenu">
+                    <img class="header-top-mobile-menu-base-icon" src="/img/header-mob-menu.svg" alt="Menu">
                 </div>
             </div>
             <router-link to="#" class="header-logo">Avion</router-link>
@@ -31,9 +31,9 @@
                     class="header-menu__link">{{ element.name }}
             </router-link>
         </div>
-        <div class="header-menu-mobile">
-            <div class="header-menu-mobile-top">
-                    <img class="header-top-mobile-menu-icon" src="/img/header-mob-menu.svg" alt="Menu">
+        <div class="header-menu-mobile" v-if="isOpenedMobileMenu">
+            <div class="header-menu-mobile-top" @click="isOpenedMobileMenu = !isOpenedMobileMenu">
+                <img class="header-top-mobile-menu-icon" src="/img/header-mob-menu.svg" alt="Menu">
             </div>
             <router-link
                     :to="element.path"
@@ -46,6 +46,8 @@
 </template>
 
 <script setup>
+import {ref} from "vue";
+
 const menu = [
     {
         name: 'Plant pots',
@@ -76,6 +78,8 @@ const menu = [
         path: '/cutlery',
     },
 ]
+
+const isOpenedMobileMenu = ref(false)
 </script>
 
 <style lang="scss" scoped>
@@ -99,6 +103,15 @@ const menu = [
 
     &-mobile-menu {
       display: none;
+
+      &-base {
+        display: none;
+
+        &-icon {
+          margin-left: 20px;
+          display: block;
+        }
+      }
     }
   }
 
@@ -162,6 +175,13 @@ const menu = [
       height: auto;
       padding: 10px;
 
+      &-mobile-menu {
+
+        &-base {
+          display: block;
+        }
+      }
+
       &-right {
         display: none;
       }
@@ -181,19 +201,16 @@ const menu = [
     }
 
     &-menu-mobile {
-      display: flex;
-      flex-direction: column;
       position: fixed;
       background-color: #fff;
       top: 0;
       right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 40px 24px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
 
       &-top {
-        display: flex;
-        justify-content: flex-end;
       }
 
       &-icon {
@@ -202,7 +219,7 @@ const menu = [
     }
 
     &-menu__link {
-      margin: 12px 0;
+      margin: 14px 0;
     }
 
     &-logo {
