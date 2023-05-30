@@ -40,7 +40,6 @@
                         </select>
                     </div>
                 </form>
-                <ProductsIndex/>
             </div>
         </div>
     </div>
@@ -48,7 +47,6 @@
 
 <script setup>
 
-import ProductsIndex from "@/components/ProductsIndex.vue";
 </script>
 
 <style lang="scss" scoped>
