@@ -1,9 +1,9 @@
 <template>
     <div class="product">
-        <router-link to="/">
-            <img class="product-img" :src="img" :alt="title">
+        <router-link :to="`products/${id}`">
+            <img class="product-img" :src="img" :alt="title" :key="id">
         </router-link>
-        <router-link class="product-name" to="/">{{ title }}</router-link>
+        <router-link class="product-name" :to="`products/${id}`">{{ title }}</router-link>
         <span class="product-price">£{{ price }}</span>
     </div>
 </template>
@@ -12,6 +12,10 @@
 
 
 const props = defineProps({
+    id: {
+        type: Number,
+        required: true,
+    },
     img: {
         type: String,
         required: true,
@@ -29,6 +33,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .product {
+  margin-bottom: 13px;
 
   @media screen and (max-width: 1024px) {
     .product-img {

@@ -5,11 +5,8 @@
                 <div class="header-top-search">
                     <img class="header-top-search-icon" src="/img/header-search.svg" alt="Search">
                 </div>
-                <div class="header-top-mobile-menu-base" @click="isOpenedMobileMenu = !isOpenedMobileMenu">
-                    <img class="header-top-mobile-menu-base-icon" src="/img/header-mob-menu.svg" alt="Menu">
-                </div>
             </div>
-            <router-link to="#" class="header-logo">Avion</router-link>
+            <router-link to="/" class="header-logo">Avion</router-link>
             <div class="header-top-right">
                 <div class="header-cart">
                     <router-link to="/cart">
@@ -22,25 +19,6 @@
                     </router-link>
                 </div>
             </div>
-        </div>
-        <div class="header-menu">
-            <router-link
-                    :to="element.path"
-                    v-for="(element, i) in menu"
-                    :key="i"
-                    class="header-menu__link">{{ element.name }}
-            </router-link>
-        </div>
-        <div class="header-menu-mobile" v-if="isOpenedMobileMenu">
-            <div class="header-menu-mobile-top" @click="isOpenedMobileMenu = !isOpenedMobileMenu">
-                <img class="header-top-mobile-menu-icon" src="/img/header-mob-menu.svg" alt="Menu">
-            </div>
-            <router-link
-                    :to="element.path"
-                    v-for="(element, i) in menu"
-                    :key="i"
-                    class="header-menu__link">{{ element.name }}
-            </router-link>
         </div>
     </header>
 </template>
@@ -84,7 +62,7 @@ const isOpenedMobileMenu = ref(false)
 
 <style lang="scss" scoped>
 .header {
-  min-height: 132px;
+  min-height: 100px;
   background-color: var(--white);
 
   &-top {
@@ -128,43 +106,11 @@ const isOpenedMobileMenu = ref(false)
     font-family: var(--font-clash-display);
     text-align: center;
   }
-
-  &-menu {
-    height: 62px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__link {
-      margin-right: 44px;
-      font-weight: 400;
-      line-height: 22px;
-      color: var(--gray-text);
-      text-decoration: none;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    &-mobile {
-      display: none;
-    }
-  }
 }
 
 @media screen and (max-width: 767px) {
   .header {
     height: auto;
-
-
-    &-menu {
-      display: none;
-    }
 
     &-top {
       display: flex;
@@ -179,6 +125,10 @@ const isOpenedMobileMenu = ref(false)
 
         &-base {
           display: block;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 

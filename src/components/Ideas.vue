@@ -6,7 +6,7 @@
                     <h2 class="ideas-info__title">It started with a small idea</h2>
                     <span class="ideas-info__description">A global brand with local beginnings, our story begain in a small studio in South London in early 2014</span>
                 </div>
-                <ViewCollectionBtn color="#fff"/>
+                <ViewCollectionBtn color="#fff" back="#494465">View collection</ViewCollectionBtn>
             </div>
             <div class="ideas-img">
                 <img  class="ideas-image" src="/public/img/ideas-room.png" alt="Room">

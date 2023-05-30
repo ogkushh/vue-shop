@@ -1,6 +1,6 @@
 <template>
-    <div class="view-collection__btn">
-        <a href="#" class="view-collection__btn-link" id="btn-link" :style="{color: color}">View collection</a>
+    <div class="view-collection__btn" :style="{backgroundColor: back}">
+        <router-link to="/catalog" class="view-collection__btn-link" id="btn-link" :style="{color: color}"><slot></slot></router-link>
     </div>
 </template>
 
@@ -13,7 +13,7 @@ const props = defineProps( {
     back: {
         type: String,
         default: '#F9F9F9'
-    }
+    },
 })
 </script>
 

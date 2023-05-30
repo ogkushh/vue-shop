@@ -1,11 +1,16 @@
 <template>
     <div class="products-container">
         <div class="products">
-            <Product v-for="product of products" :key="product.id" :img="product.img" :title="product.title"
-                     :price="product.price"/>
+            <Product
+                v-for="product of products"
+                :id="product.id"
+                :key="product.id"
+                :img="product.img"
+                :title="product.title"
+                :price="product.price"/>
         </div>
         <div class="btn-wrapper">
-            <ViewCollectionBtn/>
+            <ViewCollectionBtn>Load more</ViewCollectionBtn>
         </div>
     </div>
 </template>
@@ -36,6 +41,30 @@ const products = ref([
     },
     {
         id: 4,
+        img: '/public/img/products-lamp.png',
+        title: 'The Lucy Lamp',
+        price: 399,
+    },
+    {
+        id: 5,
+        img: '/public/img/products-lamp.png',
+        title: 'The Lucy Lamp',
+        price: 399,
+    },
+    {
+        id: 6,
+        img: '/public/img/products-lamp.png',
+        title: 'The Lucy Lamp',
+        price: 399,
+    },
+    {
+        id: 7,
+        img: '/public/img/products-lamp.png',
+        title: 'The Lucy Lamp',
+        price: 399,
+    },
+    {
+        id: 8,
         img: '/public/img/products-lamp.png',
         title: 'The Lucy Lamp',
         price: 399,

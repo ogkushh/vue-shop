@@ -1,113 +1,123 @@
 <template>
-    <div class="cover">
-        <div class="cover-info">
-            <div class="container">
-                <div class="cover-info__texts">
-                    <h2 class="cover-info__title">Luxury homeware for people who love timeless design quality</h2>
-                    <span class="hero-info__description">Shop the new Spring 2022 collection today</span>
+    <div class="intro">
+        <div class="intro-wrapper">
+            <div class="intro-right">
+                <div class="intro-right-top">
+                    <h2 class="intro-right-top-title">The furniture brand for the future, with timeless designs</h2>
+                        <ViewCollectionBtn back="#494465" color="#fff">View collection</ViewCollectionBtn>
                 </div>
-                <div class="btn-wrapper">
-                    <ViewCollectionBtn/>
-                </div>
+                <p class="intro-right-top-description">A new era in eco friendly furniture with Avelon, the French
+                    luxury retail brand
+                    with nice fonts, tasteful colors and a beautiful way to display things digitally
+                    using modern web technologies.</p>
+            </div>
+            <div class="intro-left">
+                <img class="intro-left-img" src="/public/img/chair-cover-big.png" alt="Chair">
             </div>
         </div>
-        <img class="cover-image" src="/public/img/room-main.png" alt="Room">
     </div>
 </template>
 
 <script setup>
-import ViewCollectionBtn from "./UI/ViewCollectionBtn.vue";
+
+import ViewCollectionBtn from "@/components/UI/ViewCollectionBtn.vue";
 </script>
 
 <style lang="scss" scoped>
-.cover {
-  background-image: url('/public/img/room-main.png');
-  height: 704px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 80px;
-  margin-bottom: 80px;
-
-  &-image {
-    display: none;
+.intro {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 80px 60px;
   }
 
-  &-info {
-    background-color: var(--white);
-    max-width: 630px;
-    padding: 50px 55px;
-    height: 444px;
+  &-right {
+    background-color: var(--dark-primary);
+    color: var(--white);
+    padding: 60px 98px 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 584px;
 
-    &__texts {
-      margin-bottom: 157px;
+    &-top {
+
+      &-title {
+        font-family: var(--font-clash-display);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 140%;
+        margin-bottom: 41px;
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+      }
     }
+  }
 
-    &__title {
-      font-family: var(--font-clash-display);
-      font-size: 32px;
-      max-width: 513px;
-      line-height: 140%;
-      font-weight: 400;
-      color: var(--black-title);
-      margin-bottom: 20px;
-    }
+  &-left {
 
-    &__description {
-      font-size: 18px;
-      line-height: 150%;
-      color: #5B5676;
+    &-img {
+      width: 100%;
+      height: 584px;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .cover {
-    display: block;
-    width: auto;
-    height: auto;
-    background: transparent;
-    padding-right: 0;
+  .intro {
     margin-bottom: 48px;
+    background-color: var(--dark-primary);
 
-    &-image {
+    &-wrapper {
       display: block;
+      padding: 0;
     }
 
-    &-info {
-      padding: 47px 32px;
-      height: auto;
+    &-right {
+      padding: 40px 24px 24px;
+      height: 502px;
 
+      &-top {
 
+        &-title {
+          min-width: 342px;
+          font-size: 32px;
+        }
 
-      &__texts {
-        margin-bottom: 32px;
+        &-description {
+          padding-top: 25px;
+          font-size: 18px;
+        }
       }
 
-      &__title {
-        font-size: 24px;
-        line-height: 30px;
-        margin-bottom: 12px;
-      }
-
-      &__description {
-        display: block;
-        font-size: 16px;
-        line-height: 22px;
+      &-left {
+        display: none;
       }
     }
   }
-
-  .btn-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
 }
 
+@media screen and (max-width: 1024px) {
+  .intro {
+    background-color: var(--dark-primary);
+    margin-bottom: 48px;
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-right {
+      height: 502px;
+    }
+
+    &-left {
+      display: none;
+    }
+  }
+}
 </style>
