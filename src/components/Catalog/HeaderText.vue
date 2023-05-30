@@ -32,7 +32,7 @@
                     </div>
                     <div class="cover-nav-right">
                         <p class="cover-nav-right-sorted_by">Sorting by:</p>
-                        <select class="cover-select" name="brand">
+                        <select class="cover-select last" name="brand">
                             <option class="cover-select-title" value="tables" selected>Brand</option>
                             <option class="cover-select-title" value="tables">Tables</option>
                             <option class="cover-select-title" value="chairs">Chairs</option>
@@ -69,6 +69,7 @@
 
     &-right {
       display: flex;
+      align-items: center;
 
       &-sorted_by {
         margin-right: 20px;
@@ -94,6 +95,21 @@
       line-height: 150%;
       padding: 12px 24px;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cover-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover-select {
+    margin-bottom: 20px;
+  }
+
+  .last {
+    margin: 0;
   }
 }
 </style>
