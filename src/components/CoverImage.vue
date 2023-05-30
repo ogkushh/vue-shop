@@ -1,18 +1,20 @@
 <template>
     <div class="intro">
-        <div class="intro-wrapper">
-            <div class="intro-right">
-                <div class="intro-right-top">
-                    <h2 class="intro-right-top-title">The furniture brand for the future, with timeless designs</h2>
+        <div class="container">
+            <div class="intro-wrapper">
+                <div class="intro-right">
+                    <div class="intro-right-top">
+                        <h2 class="intro-right-top-title">The furniture brand for the future, with timeless designs</h2>
                         <ViewCollectionBtn back="#494465" color="#fff">View collection</ViewCollectionBtn>
+                    </div>
+                    <p class="intro-right-top-description">A new era in eco friendly furniture with Avelon, the French
+                        luxury retail brand
+                        with nice fonts, tasteful colors and a beautiful way to display things digitally
+                        using modern web technologies.</p>
                 </div>
-                <p class="intro-right-top-description">A new era in eco friendly furniture with Avelon, the French
-                    luxury retail brand
-                    with nice fonts, tasteful colors and a beautiful way to display things digitally
-                    using modern web technologies.</p>
-            </div>
-            <div class="intro-left">
-                <img class="intro-left-img" src="/public/img/chair-cover-big.png" alt="Chair">
+                <div class="intro-left">
+                    <img class="intro-left-img" src="/public/img/chair-cover-big.png" alt="Chair">
+                </div>
             </div>
         </div>
     </div>
@@ -78,7 +80,7 @@ import ViewCollectionBtn from "@/components/UI/ViewCollectionBtn.vue";
     }
 
     &-right {
-      padding: 40px 24px 24px;
+      padding: 40px 0 24px;
       height: 502px;
 
       &-top {
