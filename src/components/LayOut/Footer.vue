@@ -38,16 +38,16 @@
                 <div class="footer-bottom">
                     <p class="footer-bottom_copyright">Copyright 2023 Avion LTD</p>
                     <div class="footer-bottom-socials">
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-In.svg"
+                        <a href="https://ru.linkedin.com/" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-In.svg"
                                                                              alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-facebook.svg"
+                        <a href="https://ru-ru.facebook.com/" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-facebook.svg"
                                                                              alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-inst.svg" alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-skype.svg"
+                        <a href="https://www.instagram.com/" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-inst.svg" alt="In"></a>
+                        <a href="https://www.skype.com/ru/" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-skype.svg"
                                                                              alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-twitter.svg"
+                        <a href="https://twitter.com/?lang=ru" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-twitter.svg"
                                                                              alt="In"></a>
-                        <a href="#" class="footer-bottom-socials__link"><img src="/public/img/footer-pinterest.svg"
+                        <a href="https://ru.pinterest.com/" class="footer-bottom-socials__link" target="_blank"><img src="/public/img/footer-pinterest.svg"
                                                                              alt="In"></a>
                     </div>
                 </div>

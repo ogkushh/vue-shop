@@ -9,7 +9,7 @@
 
 <script setup>
 
-import HeaderText from "@/components/Catalog/HeaderText.vue";
+import HeaderText from "@/components/Catalog/Catalog.vue";
 import ProductsIndex from "@/components/ProductsIndex.vue";
 </script>
 

@@ -5,6 +5,8 @@
                 <div class="intro-right">
                     <div class="intro-right-top">
                         <h2 class="intro-right-top-title">The furniture brand for the future, with timeless designs</h2>
+                    </div>
+                    <div class="btn-wrapper">
                         <ViewCollectionBtn back="#494465" color="#fff">View collection</ViewCollectionBtn>
                     </div>
                     <p class="intro-right-top-description">A new era in eco friendly furniture with Avelon, the French
@@ -30,7 +32,7 @@ import ViewCollectionBtn from "@/components/UI/ViewCollectionBtn.vue";
   &-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 40px 80px 60px;
+    padding: 40px 0 60px;
   }
 
   &-right {
@@ -100,6 +102,10 @@ import ViewCollectionBtn from "@/components/UI/ViewCollectionBtn.vue";
         display: none;
       }
     }
+  }
+
+  .btn-wrapper {
+    order: 2;
   }
 }
 
